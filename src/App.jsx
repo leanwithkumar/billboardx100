@@ -8,6 +8,7 @@ import PrivateRoute from './PrivateRoute'
 import Algorithms from './components/Algorithms'
 import Coresubjects from './components/Coresubjects'
 import Development from './components/Development'
+import Resource from './components/Resource'
 
 function App() {
 
@@ -25,13 +26,14 @@ const GoogleAuthWrapper = ()=>{
       <Route path='/login' element={<GoogleAuthWrapper/>}/>
 
 
- <Route element={<PrivateRoute />}>
+    <Route element={<PrivateRoute />}>
         <Route path="/" element={<Home />}>
           <Route path="/" element={<Coresubjects />} />
           <Route path='algorithms' element={<Algorithms />}/>
           <Route path='development' element={<Development/>}/>
+          <Route path='resource' element={<Resource/>}/>
         </Route>
-      </Route>
+    </Route>
 
 
 

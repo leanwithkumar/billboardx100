@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 function Coresubjects() {
   const [openCard, setOpenCard] = useState(null);
+  const [userCount, setUserCount] = useState(0);
 
   const subjects = [
     { number: 1, title: "Basic Electrical Engineering", links: ["link1", "link2"] },
@@ -11,6 +13,19 @@ function Coresubjects() {
   const toggleLinks = (index) => {
     setOpenCard(openCard === index ? null : index);
   };
+
+  useEffect(() => {
+    const fetchUserCount = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/users/count");
+        setUserCount(response.data.totalUsers);
+      } catch (error) {
+        console.error("Error fetching user count:", error);
+      }
+    };
+
+    fetchUserCount();
+  }, []);
 
   return (
     <>
@@ -29,7 +44,7 @@ function Coresubjects() {
 
           <div className="text-2xl md:text-4xl font-bold flex flex-col md:flex-row items-center justify-center gap-4">
             <img src="/user.png" alt="user" className="w-12 md:w-20" />
-            <div className="px-0 md:px-8">200+ users</div>
+            <div className="px-0 md:px-8">Subscribers {userCount}</div>
           </div>
         </div>
       </div>

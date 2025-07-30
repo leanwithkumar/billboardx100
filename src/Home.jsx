@@ -25,8 +25,8 @@ function Home() {
       <div>
         <div className="bg-[#101119] text-white py-5">
           <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 px-4 md:px-10">
-            <button className="text-3xl font-bold font-poppins cursor-pointer"  onClick={() => navigate('/')}> bbx100</button>
-            <div className="text-4xl font-bold text-center hidden md:block">billboardx100</div>
+            <button className="text-4xl pt-2 font-bold font-poppins cursor-pointer"  onClick={() => navigate('/')}> bbx100</button>
+            <div className="text-5xl md:pl-10 font-bold text-center hidden md:block">billboardx100</div>
             <div className="flex flex-col md:flex-row justify-center md:justify-between gap-2">
               <div className="p-2 bg-[#1A48C4] font-bold px-5 text-xl  items-center gap-2 hidden md:block">
                 {userInfo?.image && (
@@ -48,16 +48,18 @@ function Home() {
 
           <div className="flex justify-center">
             <div className="flex flex-wrap justify-center gap-4 md:gap-10">
-             <div className="text-xl">FUNDAMENTAL</div>
-             
+              <Link to={'/'}>
+              <div className="text-xl">SEMESTER</div>
+              </Link>
              <Link to={'algorithms'}>
-             <div className="text-xl">ALGORITHMS</div>
+             <div className="text-xl">ALGORITHM</div>
              </Link>
              <Link to={'development'}>
               <div className="text-xl">DEVELOPMENT</div>
-             </Link>  
-              <div className="text-xl">ROADMAPS</div>
-              <div className="text-xl">SYLLABUS</div>
+             </Link> 
+             <Link to={'resource'}>
+              <div className="text-xl">RESOURCE</div>
+             </Link> 
             </div>
           </div>
         </div>

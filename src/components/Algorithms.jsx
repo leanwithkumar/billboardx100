@@ -49,6 +49,24 @@ function Algorithms() {
 
                  <div  className="border-b border-gray-300 pb-4 mb-4 font-bold">
                     Problem Sheets<br/><br/>
+
+
+
+
+                    <div className='pb-5' >
+                    <a 
+                    href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:underline"
+                    >
+                    Striver A2Z Sheet<br/>
+                        
+                    </a>
+
+
+                   
+                    </div>
                     <div className='pb-5'>
                     <a 
                     href="https://cses.fi/problemset/CSES" 
