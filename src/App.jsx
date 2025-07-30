@@ -1,9 +1,13 @@
 import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import GoogleLogin from './GoogleLogin'
 import Errorfile from './components/Errorfile'
 import { GoogleOAuthProvider } from '@react-oauth/google'
 import Home from './Home'
+import PrivateRoute from './PrivateRoute'
+import Algorithms from './components/Algorithms'
+import Coresubjects from './components/Coresubjects'
+import Development from './components/Development'
 
 function App() {
 
@@ -19,8 +23,20 @@ const GoogleAuthWrapper = ()=>{
     <>
     <Routes>
       <Route path='/login' element={<GoogleAuthWrapper/>}/>
-      <Route path='/' element={<Navigate to='/login'/>}/>
-      <Route path='/home' element={<Home/>}/>
+
+
+ <Route element={<PrivateRoute />}>
+        <Route path="/" element={<Home />}>
+          <Route path="/" element={<Coresubjects />} />
+          <Route path='algorithms' element={<Algorithms />}/>
+          <Route path='development' element={<Development/>}/>
+        </Route>
+      </Route>
+
+
+
+
+
       <Route path='*' element={<Errorfile/>}/>
     
 

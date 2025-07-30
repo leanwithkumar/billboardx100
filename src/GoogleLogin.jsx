@@ -2,6 +2,7 @@ import { useGoogleLogin } from '@react-oauth/google'
 import React from 'react'
 import { googleAuth } from './api'
 import { useNavigate } from 'react-router-dom'
+import Footer from './components/Footer'
 
 function GoogleLogin() {
   const navigate = useNavigate()
@@ -15,7 +16,7 @@ function GoogleLogin() {
         const obj = { email, name, image, token }
         localStorage.setItem("user-info", JSON.stringify(obj))
         console.log(result.data.user)
-        navigate('/home')
+        navigate('/')
       }
     } catch (error) {
       console.log(error)
@@ -59,13 +60,8 @@ function GoogleLogin() {
     </div>
   </div>
 
-  {/* White line separator */}
-<div className="w-full h-[0.5px] bg-white my-5"></div>
-  {/* Footer */}
-  <footer className="text-center pb-10">
-   <div> © 2025 BillboardX100 </div>
-   <div>   made with love by leanwithkumar </div>
-  </footer>
+  
+  <Footer/>
 </div>
 
 

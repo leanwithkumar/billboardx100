@@ -213,7 +213,7 @@ function Algorithms() {
 
 
                     <div className='pb-5' >
-                        <a 
+                    <a 
                     href=" https://neetcode.io/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
@@ -234,11 +234,58 @@ function Algorithms() {
                   <div  className="border-b border-gray-300 pb-4 mb-4 font-bold">
                     Contests <br/><br/>
                     <div className='md:flex  md:justify-start md:gap-4'>
-                        <div>Codeforces</div>
-                        <div>Leetcode</div>
-                        <div>CodeChef</div>
-                        <div>AtCoder</div>
-                        <div>GeeksforGeeks</div>
+                       
+                    <div>
+                    <a 
+                    href=" https://codeforces.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:underline"
+                    >
+                    Codeforces<br/>
+                        
+                    </a></div>
+                        <div>
+                            <a 
+                    href="https://leetcode.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:underline"
+                    >
+                      Leetcode<br/>
+                        
+                    </a>
+                          </div>
+                        <div>
+                            <a 
+                    href="https://www.codechef.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:underline"
+                    >
+                    CodeChef<br/>
+                        
+                    </a></div>
+                        <div>
+                            <a 
+                    href="https://atcoder.jp/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:underline"
+                    >
+                    AtCoder<br/>
+                        
+                    </a></div>
+                        <div>
+                            <a 
+                    href="https://www.geeksforgeeks.org/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:underline"
+                    >
+                    GeeksforGeeks<br/>
+                        
+                    </a></div>
                     </div>
                  </div>
 
