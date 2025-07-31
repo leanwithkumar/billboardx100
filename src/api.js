@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: '/api/auth' // now it will pass through the vercel.json rewrite
-});
+    baseURL: 'https://bbx100-backend.onrender.com/auth'
+})
 
-export const googleAuth = (code) => api.get(`/google?code=${code}`);
+export const googleAuth = (code) => api.get(`/google?code=${code}`)

@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://bbx100backend-production.up.railway.app/:path*" }
+    { "source": "/api/:path*", "destination": "https://bbx100-backend.onrender.com/:path*" }
   ]
 }

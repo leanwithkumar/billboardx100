@@ -17,7 +17,7 @@ function Coresubjects() {
   useEffect(() => {
     const fetchUserCount = async () => {
       try {
-        const response = await axios.get("https://bbx100backend-production.up.railway.app/users/count");
+        const response = await axios.get("https://bbx100-backend.onrender.com/users/count");
         setUserCount(response.data.totalUsers);
       } catch (error) {
         console.error("Error fetching user count:", error);
