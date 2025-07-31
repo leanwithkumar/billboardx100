@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -8,10 +9,10 @@ function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <h2 className="text-lg font-bold mb-4 md:mb-0">Follow Us</h2>
           <div className="flex flex-wrap gap-6 text-sm font-medium">
-            <a href="#" className="hover:underline">twitter</a>
-            <a href="#" className="hover:underline">linkedin</a>
-            <a href="#" className="hover:underline">instagram</a>
-            <a href="#" className="hover:underline">github</a>
+            <a href="https://x.com/leanwithkumar" target='_blank' className="hover:underline">twitter</a>
+            <a href="https://www.linkedin.com/in/abhay-kumar-443b981b6/" target='_blank' className="hover:underline">linkedin</a>
+            <a href="https://www.instagram.com/leanwithkumar/" target='_blank' className="hover:underline">instagram</a>
+            <a href="https://github.com/leanwithkumar" target='_blank' className="hover:underline">github</a>
           </div>
         </div>
 
@@ -21,10 +22,10 @@ function Footer() {
         {/* Bottom Links */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between text-sm">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
-            <a href="#" className="hover:underline">about us</a>
-            <a href="#" className="hover:underline">privacy</a>
-            <a href="#" className="hover:underline">terms</a>
-            <a href="#" className="hover:underline">help</a>
+            <Link to="/about" className="hover:underline">about</Link>
+            <a href="/privacy" className="hover:underline">privacy</a>
+            <a href="/terms" className="hover:underline">terms</a>
+            <a href="/help" className="hover:underline">help</a>
           </div>
           <div className="text-gray-400">© billboardx100 2025</div>
         </div>

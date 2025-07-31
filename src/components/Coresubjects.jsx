@@ -30,11 +30,9 @@ function Coresubjects() {
   return (
     <>
       <div>
-        {/* Header Section */}
         <div className="text-4xl md:text-8xl font-bold text-center">billboardx100</div>
         <div className="w-full h-[2px] bg-black my-5"></div>
 
-        {/* Info Section */}
         <div className="flex flex-col md:flex-row justify-between gap-5">
           <div className="text-base md:text-xl font-bold text-center md:text-left pt-5">
             billboardx100 since 1 Aug 2025
@@ -49,7 +47,6 @@ function Coresubjects() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="py-20">
         <div className="bg-[#D9D9D9]">
           <div className="px-5 md:px-20 py-10">
@@ -61,21 +58,17 @@ function Coresubjects() {
                   syllabus according to university
                 </div>
 
-                {/* Subjects Loop */}
                 <div className="py-10 px-5">
                   {subjects.map((subject, index) => (
                     <div key={index} className="border-b border-gray-300 pb-4 mb-4">
                       <div className="flex flex-col sm:flex-row sm:items-start gap-4">
-                        {/* Number Section */}
                         <div className="w-12 h-12 sm:w-16 sm:h-16 bg-black text-white flex items-center justify-center text-lg sm:text-xl font-bold">
                           {subject.number}
                         </div>
 
-                        {/* Subject Section */}
                         <div className="flex-1">
                           <div className="font-bold text-lg sm:text-xl">{subject.title}</div>
 
-                          {/* Links Section */}
                           <div className="flex gap-4 sm:gap-6 mt-1 flex-wrap">
                             <span
                               className="font-semibold cursor-pointer text-blue-600"
@@ -86,7 +79,6 @@ function Coresubjects() {
                             <span className="font-semibold cursor-pointer">Notes</span>
                           </div>
 
-                          {/* Dropdown Below Full Width */}
                           {openCard === index && (
                             <div className="mt-5 px-3 py-5 bg-gray-200  w-full">
                               {subject.links.map((link, i) => (

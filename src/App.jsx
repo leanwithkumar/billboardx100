@@ -9,6 +9,10 @@ import Algorithms from './components/Algorithms'
 import Coresubjects from './components/Coresubjects'
 import Development from './components/Development'
 import Resource from './components/Resource'
+import About from './components/About'
+import Privacy from './components/Privacy'
+import Terms from './components/Terms'
+import Help from './components/Help'
 
 function App() {
 
@@ -24,6 +28,11 @@ const GoogleAuthWrapper = ()=>{
     <>
     <Routes>
       <Route path='/login' element={<GoogleAuthWrapper/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/privacy' element={<Privacy/>}/>
+      <Route path='/terms' element={<Terms/>}/>
+      <Route path='/help' element={<Help/>}/>
+      
 
 
     <Route element={<PrivateRoute />}>
