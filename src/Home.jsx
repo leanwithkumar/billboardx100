@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Navigate, Outlet, useNavigate } from 'react-router-dom';
 import Footer from './components/Footer';
-import Algorithms from './components/Algorithms';
 
 function Home() {
   const [userInfo, setUserInfo] = useState(null);
