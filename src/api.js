@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'https://bbx100-backend.onrender.com/auth'
-})
+  baseURL: 'https://bbx100-backend.onrender.com/auth'
+});
 
-export const googleAuth = (code) => api.post('/google', { code }); // changed to POST
+// Send code as query string
+export const googleAuth = (code) => api.get(`/google?code=${code}`);
