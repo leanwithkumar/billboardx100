@@ -14,7 +14,7 @@ function App() {
 
 const GoogleAuthWrapper = ()=>{
   return(
-    <GoogleOAuthProvider clientId='264124323101-pv1kg9s1bjf2fgscq8u83df3t2t85gar.apps.googleusercontent.com'>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT_ID}>
       <GoogleLogin></GoogleLogin>
     </GoogleOAuthProvider>
   )

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/auth'
+    baseURL: 'https://bbx100backend-production.up.railway.app/auth'
 })
 
 export const googleAuth = (code) =>api.get(`/google?code=${code}`)

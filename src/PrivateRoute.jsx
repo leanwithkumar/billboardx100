@@ -18,7 +18,7 @@ const PrivateRoute = () => {
     return <Navigate to="/login" replace />;
   }
 
-  return <Outlet />; // ✅ required for nested routing
+  return <Outlet />; 
 };
 
 export default PrivateRoute;
