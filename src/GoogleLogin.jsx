@@ -18,7 +18,7 @@ function GoogleLogin() {
         console.log(error)
     }
   }
-  checkthis
+  checkthis()
 
   const responseGoogle = async (authResult) => {
     try {
