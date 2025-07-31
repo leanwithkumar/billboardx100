@@ -3,9 +3,22 @@ import React from 'react'
 import { googleAuth } from './api'
 import { useNavigate } from 'react-router-dom'
 import Footer from './components/Footer'
+import axios from 'axios'
 
 function GoogleLogin() {
   const navigate = useNavigate()
+
+  const checkthis = async()=>{
+    try{
+      const res = await axios.get('https://bbx100-backend.onrender.com/check')
+      console.log(res)
+
+    }
+    catch(error){
+        console.log(error)
+    }
+  }
+  checkthis
 
   const responseGoogle = async (authResult) => {
     try {
